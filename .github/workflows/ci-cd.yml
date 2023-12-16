@@ -7,7 +7,8 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout Repository
+        uses: actions/checkout@v2
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v1
         with:
@@ -15,11 +16,17 @@ jobs:
       - name: Install dependencies
         run: dotnet restore
       - name: Build
-        run: dotnet build --configuration Release --no-restore
+        run: >-
+          dotnet build YourProjectName.csproj --configuration Release
+          --no-restore
       - name: Test
-        run: dotnet test --no-restore --verbosity normal
+        run: >-
+          dotnet test YourProjectName.Tests.csproj --no-restore --verbosity
+          normal
       - name: Publish
-        run: dotnet publish --configuration Release --no-build -o ./publish
+        run: >-
+          dotnet publish YourProjectName.csproj --configuration Release
+          --no-build -o ./publish
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
