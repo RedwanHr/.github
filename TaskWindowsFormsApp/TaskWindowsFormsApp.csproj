@@ -9,7 +9,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>TaskWindowsFormsApp</RootNamespace>
     <AssemblyName>TaskWindowsFormsApp</AssemblyName>
-    <TargetFrameworkVersion>net6.0-windows;netcoreapp3.1:netcoreapp4.7.2;net8.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>net6.0-windows;net6.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
