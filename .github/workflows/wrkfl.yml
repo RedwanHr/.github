@@ -9,7 +9,7 @@ jobs:
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: 4.7.2
+          dotnet-version: 6.0.318
       - name: Build and test
         run: dotnet build --configuration Release
   release:
@@ -21,7 +21,7 @@ jobs:
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: 4.7.2
+          dotnet-version: 6.0.318
       - name: Build and package project
         run: dotnet publish --configuration Release --output ./publish
       - name: Show contents of the current working directory
@@ -42,7 +42,7 @@ jobs:
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: 4.7.2
+          dotnet-version: 6.0.318
       - name: Install Railway
         run: npm i -g @railway/cli
       - name: Deploy
